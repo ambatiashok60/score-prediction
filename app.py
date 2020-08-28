@@ -30,7 +30,7 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 
 # geting and sending response to dialogflow
-@app.route('/webhook', methods=['POST'])
+@app.route('/', methods=['POST'])
 def score_prediction():
     json = request.get_json()
     print(json)
